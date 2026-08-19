@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrar - Meu Financeiro</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body d-flex align-items-center">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+
+      <div class="text-center mb-4">
+        <span class="fs-2"></span>
+        <h1 class="h4 mt-2 mb-0">Meu Financeiro</h1>
+        <p class="text-muted small">Controle suas receitas e despesas</p>
+      </div>
+
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="h5 mb-3">Entrar</h2>
+
+          <div id="loginErro" class="alert alert-danger py-2 small d-none"></div>
+
+          <form id="formLogin" novalidate>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="voce@email.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="senha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="senha" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+          </form>
+
+          <p class="text-center small text-muted mt-3 mb-0">
+            Não tem uma conta? <a href="cadastro.html">Criar cadastro</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="login.js"></script>
+</body>
+</html>
