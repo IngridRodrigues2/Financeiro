@@ -29,7 +29,7 @@ O sistema permite que usuários criem uma conta, façam login e gerenciem suas p
 * HTML5
 * CSS3
 * JavaScript
-* Bootstrap 5
+
 
 ## Back-end
 
