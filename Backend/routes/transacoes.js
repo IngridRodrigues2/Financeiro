@@ -15,9 +15,9 @@ router.post("/",autenticar,(req,res)=>{
             mensagem:"O valor deve ser maior que zero."
         });
     }
-    if(tipo !== "receita" && tipo !== "despesa"){
+    if(tipo !== "Receita" && tipo !== "Despesa"){
         return res.status(400).json({
-            mensagem:"O tipo deve ser receita ou despesa."
+            mensagem:"O tipo deve ser Receita ou Respesa."
         });
     }
     db.run(

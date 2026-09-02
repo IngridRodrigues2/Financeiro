@@ -70,7 +70,7 @@ router.post("/login",(req, res)=>{
                 { expiresIn:"1h"}
             );
             res.json({
-                mensagem:"Login realizado com sucesso!.",usuarioId:usuario.id,token:token
+                mensagem:"Login realizado com sucesso!.",usuarioId:usuario.id, nome:usuario.nome, token:token
             });
         }
     );
