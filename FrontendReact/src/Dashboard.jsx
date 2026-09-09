@@ -9,7 +9,7 @@ function Dashboard({ sair, nome }) {
     totalDespesas: 0,
     saldo: 0,
   });
-
+  
   const [descricao, setDescricao] = useState("");
   const [valor, setValor] = useState("");
   const [tipo, setTipo] = useState("receita");
