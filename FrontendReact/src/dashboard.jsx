@@ -30,7 +30,7 @@ function Dashboard({ sair, nome }) {
   async function carregarDados() {
     try {
       const respostaTransacoes = await fetch(
-        "http://localhost:3000/transacoes",
+        `${import.meta.env.VITE_API_URL}/transacoes`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -48,7 +48,7 @@ function Dashboard({ sair, nome }) {
       setTransacoes(dadosTransacoes);
 
       const respostaResumo = await fetch(
-        "http://localhost:3000/transacoes/resumo",
+        `${import.meta.env.VITE_API_URL}/transacoes/resumo`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -108,7 +108,7 @@ function Dashboard({ sair, nome }) {
 
       if (editandoId !== null) {
         const resposta = await fetch(
-          `http://localhost:3000/transacoes/${editandoId}`,
+          `${import.meta.env.VITE_API_URL}/transacoes/${editandoId}`,
           {
             method: "PUT",
             headers: {
@@ -144,7 +144,7 @@ function Dashboard({ sair, nome }) {
       // ======================================
 
       const resposta = await fetch(
-        "http://localhost:3000/transacoes",
+        `${import.meta.env.VITE_API_URL}/transacoes`,
         {
           method: "POST",
           headers: {
@@ -207,7 +207,7 @@ function Dashboard({ sair, nome }) {
 
     try {
       const resposta = await fetch(
-        `http://localhost:3000/transacoes/${id}`,
+        `${import.meta.env.VITE_API_URL}/transacoes/${id}`,
         {
           method: "DELETE",
           headers: {

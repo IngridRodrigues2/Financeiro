@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Dashboard from "./dashboard";
+import Dashboard from "./Dashboard";
 
 function App() {
   const [tela, setTela] = useState("login");
@@ -30,7 +30,7 @@ function App() {
     }
 
     try {
-      const resposta = await fetch("http://localhost:3000/auth/register", {
+      const resposta = await fetch(`${import.meta.env.VITE_API_URL}/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -72,7 +72,7 @@ function App() {
   }
 
   try {
-    const resposta = await fetch("http://localhost:3000/auth/login", {
+    const resposta = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
