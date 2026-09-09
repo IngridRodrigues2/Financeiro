@@ -4,9 +4,9 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f6f8;
-  color: #1f2937;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #0b1220;
+  color: #e2e8f0;
 }
 
 .dashboard {
@@ -18,9 +18,10 @@ body {
 ========================= */
 
 .dashboard-header {
-  background: #111827;
+  background: #0f1729;
   color: white;
   padding: 24px 40px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 
   display: flex;
   justify-content: space-between;
@@ -30,11 +31,13 @@ body {
 .dashboard-header h1 {
   margin: 0;
   font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 .dashboard-header p {
   margin: 5px 0 0;
-  color: #cbd5e1;
+  color: #94a3b8;
 }
 
 .dashboard-header button {
@@ -45,10 +48,12 @@ body {
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .dashboard-header button:hover {
   background: #dc2626;
+  transform: translateY(-1px);
 }
 
 /* =========================
@@ -73,22 +78,24 @@ main {
 }
 
 .card-resumo {
-  background: white;
+  background: #111a2e;
   padding: 25px;
-  border-radius: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
 
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .card-resumo h3 {
   margin: 0 0 10px;
   font-size: 16px;
-  color: #64748b;
+  color: #94a3b8;
+  font-weight: 500;
 }
 
 .card-resumo strong {
   font-size: 25px;
-  color: #111827;
+  color: #f8fafc;
 }
 
 /* =========================
@@ -96,11 +103,12 @@ main {
 ========================= */
 
 .nova-transacao {
-  background: white;
+  background: #111a2e;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
 
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 
   margin-bottom: 30px;
 }
@@ -109,7 +117,8 @@ main {
 .lista-transacoes h2 {
   margin-top: 0;
   margin-bottom: 25px;
-  color: #111827;
+  color: #f8fafc;
+  font-weight: 700;
 }
 
 .nova-transacao form {
@@ -125,22 +134,31 @@ main {
 
 .campo label {
   margin-bottom: 7px;
-  font-weight: bold;
-  color: #374151;
+  font-weight: 600;
+  color: #cbd5e1;
+  font-size: 14px;
 }
 
 .campo input,
 .campo select {
   padding: 12px;
-  border: 1px solid #d1d5db;
-  border-radius: 7px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
   font-size: 15px;
+  background: #0b1220;
+  color: #e2e8f0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo input::placeholder {
+  color: #64748b;
 }
 
 .campo input:focus,
 .campo select:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: #34d399;
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.15);
 }
 
 .nova-transacao form > button {
@@ -148,19 +166,21 @@ main {
 
   padding: 13px;
   border: none;
-  border-radius: 7px;
+  border-radius: 8px;
 
-  background: #2563eb;
-  color: white;
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  color: #04231a;
 
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
 
   cursor: pointer;
+  transition: filter 0.15s ease, transform 0.15s ease;
 }
 
 .nova-transacao form > button:hover {
-  background: #1d4ed8;
+  filter: brightness(1.05);
+  transform: translateY(-1px);
 }
 
 /* =========================
@@ -168,20 +188,22 @@ main {
 ========================= */
 
 .erro {
-  background: #fee2e2;
-  color: #991b1b;
+  background: rgba(239, 68, 68, 0.12);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.25);
 
   padding: 12px;
-  border-radius: 7px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
 .sucesso {
-  background: #dcfce7;
-  color: #166534;
+  background: rgba(16, 185, 129, 0.12);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.25);
 
   padding: 12px;
-  border-radius: 7px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
@@ -190,11 +212,12 @@ main {
 ========================= */
 
 .lista-transacoes {
-  background: white;
+  background: #111a2e;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
 
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .tabela-container {
@@ -208,19 +231,25 @@ table {
 
 th {
   text-align: left;
-  background: #f1f5f9;
+  background: transparent;
   padding: 14px;
-  color: #475569;
+  color: #94a3b8;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
 }
 
 td {
   padding: 14px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+  color: #e2e8f0;
 }
 
-tr:hover {
-  background: #f8fafc;
+tr:hover td {
+  background: rgba(148, 163, 184, 0.05);
 }
+
 /* =========================
    BOTÕES DA TABELA
 ========================= */
@@ -241,27 +270,27 @@ td button {
 /* EDITAR */
 
 td button:first-child {
-  background: #f8fafc;
-  color: #334155;
-  border-color: #cbd5e1;
+  background: rgba(148, 163, 184, 0.08);
+  color: #cbd5e1;
+  border-color: rgba(148, 163, 184, 0.25);
 }
 
 td button:first-child:hover {
-  background: #e2e8f0;
-  border-color: #94a3b8;
+  background: rgba(148, 163, 184, 0.16);
+  border-color: rgba(148, 163, 184, 0.4);
 }
 
 /* EXCLUIR */
 
 td button:last-child {
-  background: #fff;
-  color: #b91c1c;
-  border-color: #fecaca;
+  background: transparent;
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.3);
 }
 
 td button:last-child:hover {
-  background: #fef2f2;
-  border-color: #fca5a5;
+  background: rgba(248, 113, 113, 0.1);
+  border-color: rgba(248, 113, 113, 0.5);
 }
 
 /* =========================
@@ -332,6 +361,6 @@ td button:last-child:hover {
 }
 
 .usuario-header button:hover {
-  background: #1f2937;
+  background: rgba(148, 163, 184, 0.1);
   border-color: #64748b;
 }

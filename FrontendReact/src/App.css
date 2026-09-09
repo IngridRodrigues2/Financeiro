@@ -4,8 +4,8 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  color: #1f2937;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #e5f5ec;
 }
 
 .login-container {
@@ -14,37 +14,51 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #eef2f7;
+  background: radial-gradient(circle at 85% 100%, #0d3b2e 0%, #08251d 45%, #05130f 100%);
   padding: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .login-card {
   width: 100%;
   max-width: 420px;
-  background: #ffffff;
+  background: rgba(12, 41, 33, 0.55);
   padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border-radius: 24px;
+  border: 1px solid rgba(52, 211, 153, 0.18);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  position: relative;
+  z-index: 1;
 }
 
 .login-card h1 {
   margin: 0;
-  text-align: center;
-  font-size: 30px;
-  color: #111827;
+  text-align: left;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .login-card > p {
-  text-align: center;
-  color: #4b5563;
-  margin-top: 8px;
-  margin-bottom: 30px;
+  text-align: left;
+  color: #9fb8ac;
+  margin-top: 10px;
+  margin-bottom: 32px;
+  line-height: 1.5;
+  font-size: 15px;
 }
 
 .login-card h2 {
   margin-bottom: 20px;
-  color: #111827;
+  color: #ffffff;
   font-size: 22px;
+  font-weight: 700;
 }
 
 .campo {
@@ -54,71 +68,91 @@ body {
 .campo label {
   display: block;
   margin-bottom: 7px;
-  font-weight: bold;
-  color: #374151;
+  font-weight: 600;
+  color: #a9c4b8;
+  font-size: 14px;
 }
 
 .campo input {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
+  padding: 14px 16px;
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  border-radius: 12px;
   font-size: 16px;
-  color: #111827;
-  background: #ffffff;
+  color: #f0fdf6;
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.campo input::placeholder {
+  color: #6b8579;
 }
 
 .campo input:focus {
   outline: none;
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+  border-color: #34d399;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.15);
 }
 
 button {
   width: 100%;
-  padding: 13px;
+  padding: 15px;
   border: none;
-  border-radius: 8px;
-  background: #4f46e5;
-  color: white;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  color: #04231a;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
 }
 
 button:hover {
-  background: #4338ca;
+  filter: brightness(1.05);
+  box-shadow: 0 10px 24px rgba(16, 185, 129, 0.4);
+}
+
+button:active {
+  transform: translateY(1px) scale(0.99);
 }
 
 .erro {
-  background: #fee2e2;
-  color: #b91c1c;
-  padding: 10px;
-  border-radius: 8px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  padding: 12px 14px;
+  border-radius: 10px;
   margin-bottom: 18px;
   font-size: 14px;
 }
+
 .sucesso {
-  background: #dcfce7;
-  color: #166534;
-  padding: 10px;
-  border-radius: 8px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 12px 14px;
+  border-radius: 10px;
   margin-bottom: 18px;
   font-size: 14px;
 }
 
 .cadastro {
-  margin-top: 20px;
+  margin-top: 24px;
   font-size: 14px;
-  color: #4b5563;
+  color: #9fb8ac;
+  text-align: center;
 }
 
 .cadastro span {
-  color: #4f46e5;
-  font-weight: bold;
+  color: #34d399;
+  font-weight: 700;
   cursor: pointer;
+  transition: color 0.15s ease;
 }
 
 .cadastro span:hover {
+  color: #6ee7b7;
   text-decoration: underline;
 }
