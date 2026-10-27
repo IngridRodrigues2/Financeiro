@@ -11,6 +11,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [erro, setErro] = useState("");
+  const [carregandoLogin, setCarregandoLogin]=useState(false);
 
   // Cadastro
   const [nomeCadastro, setNomeCadastro] = useState("");
@@ -70,6 +71,7 @@ function App() {
     setErro("Preencha o email e a senha.");
     return;
   }
+  setCarregandoLogin(true);
 
   try {
     const resposta = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
@@ -101,6 +103,8 @@ function App() {
   } catch (error) {
     console.error(error);
     setErro("Não foi possível conectar ao servidor.");
+  }finally{
+    setCarregandoLogin(false);
   }
 }
   if(logado){
@@ -232,8 +236,8 @@ function App() {
             />
           </div>
 
-          <button type="submit">
-            Entrar
+          <button type="submit" disabled={carregandoLogin}>{carregandoLogin && <span className="spinner"></span>}
+           {carregandoLogin?"Entrando...":"Entrar"}
           </button>
 
         </form>

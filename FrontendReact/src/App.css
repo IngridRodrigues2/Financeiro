@@ -156,3 +156,23 @@ button:active {
   color: #6ee7b7;
   text-decoration: underline;
 }
+.spinner{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: girar 0.7s linear infinite;
+  vertical-align: middle;
+}
+button:disabled{
+  opacity: 0,7;
+  cursor: not-allowed;
+}
+@keyframes girar{
+  to{
+    transform: rotate(360deg);
+  }
+}

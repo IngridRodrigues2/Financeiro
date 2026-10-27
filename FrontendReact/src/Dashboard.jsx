@@ -9,7 +9,7 @@ function Dashboard({ sair, nome }) {
     totalDespesas: 0,
     saldo: 0,
   });
-  
+
   const [descricao, setDescricao] = useState("");
   const [valor, setValor] = useState("");
   const [tipo, setTipo] = useState("receita");
@@ -264,11 +264,11 @@ function Dashboard({ sair, nome }) {
 
         <div className="usuario-header">
           <span>Olá, {nome}</span>
-        
 
-         <button onClick={sair}>
-          Sair
-         </button>
+
+          <button onClick={sair}>
+            Sair
+          </button>
         </div>
       </header>
 
@@ -464,7 +464,7 @@ function Dashboard({ sair, nome }) {
                       </td>
 
                       <td>
-                        {transacao.tipo.charAt(0).toUpperCase()+transacao.tipo.slice(1)}
+                        {transacao.tipo.charAt(0).toUpperCase() + transacao.tipo.slice(1)}
                       </td>
 
                       <td>
